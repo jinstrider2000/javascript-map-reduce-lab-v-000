@@ -9031,7 +9031,7 @@ function appendRow(body, issue)
   let cols = [];
   for (var key in issue)
   {
-    if (key === 'body' || key === 'created_at' || key === 'state') 
+    if (key === 'body' || key === 'created_at' || key === 'state')
     {
       cols.push(issue[key]);
     }
@@ -9043,10 +9043,10 @@ function appendRow(body, issue)
     tempCol.innerText = cols[i];
     row.appendChild(tempCol);
   }
-  
+
   body.appendChild(row);
 
   return body;
 }
 
-var newTableBody = issues.reduce(appendRow,tableBody)
+var newTableBody = nonAutomaticIssues.reduce(appendRow,tableBody)
