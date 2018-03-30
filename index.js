@@ -9023,7 +9023,7 @@ var nonAutomaticIssues = issues.reduce((nonAutoIssues, issue) => {
   return nonAutoIssues;
 }, []);
 
-var tableBody = document.findElementById("results");
+var tableBody = document.getElementById("results");
 
 function appendRow(body, issue)
 {
@@ -9039,7 +9039,7 @@ function appendRow(body, issue)
 
   for (var i = 0; i < cols.length; i++)
   {
-    let tempCol = document.creatElement("td");
+    let tempCol = document.createElement("td");
     tempCol.innerText = cols[i];
     row.appendChild(tempCol);
   }
@@ -9049,4 +9049,4 @@ function appendRow(body, issue)
   return body;
 }
 
-var newTableBody = nonAutomaticIssues.reduce(appendRow,tableBody)
+var newTableBody = nonAutomaticIssues.reduce(appendRow,tableBody);
